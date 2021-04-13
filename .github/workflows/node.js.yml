@@ -7,24 +7,22 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    env:
-      GITHUB_TOKEN: ${{ secrets.BOT_SECRET }}
+  gh-pages-deploy:
+    name: Deploying to gh-pages
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - name: Setup Node.js for use with actions
     - uses: actions/checkout@v2
-      with:
-        repo-token: ${{ secrets.BOT_SECRET }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: echo '${{ secrets.BOT_SECRET }}'
     - run: yarn install
-    - run: yarn deploy
+      run: |
+        git config user.name "Auto Deploy Bot" && git config user.email "autodeploybot@fyjgnmfnhgfmh.setgdfyg"
+        npm run gh-pages-deploy
