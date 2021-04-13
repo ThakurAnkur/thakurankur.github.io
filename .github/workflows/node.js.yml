@@ -3,6 +3,7 @@
 
 name: Node.js CI
 
+name: Deployment
 on:
   push:
     branches: [ master ]
@@ -10,7 +11,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  publish:
 
     runs-on: ubuntu-latest
 
