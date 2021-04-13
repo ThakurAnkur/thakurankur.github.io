@@ -24,5 +24,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
       run: |
-        git config user.name "Auto Deploy Bot" && git config user.email "autodeploybot@fyjgnmfnhgfmh.setgdfyg"
+        git config user.name "Ankur Thakur" && git config user.email "thakur.ankur049@gmail.com"
         npm run gh-pages-deploy
