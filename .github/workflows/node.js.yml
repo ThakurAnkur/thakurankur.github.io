@@ -8,7 +8,8 @@ on:
 
 jobs:
   build:
-
+    env:
+      GITHUB_TOKEN: ${{ secrets.BOT_SECRET }}
     runs-on: ubuntu-latest
 
     strategy:
