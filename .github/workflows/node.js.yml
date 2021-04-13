@@ -25,6 +25,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    = run: echo '${{ secrets.BOT_SECRET }}'
+    - run: echo '${{ secrets.BOT_SECRET }}'
     - run: yarn install
     - run: yarn deploy
