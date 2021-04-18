@@ -1,6 +1,8 @@
 import * as React from "react";
-import { Heading } from '@chakra-ui/layout';
+import { Box, Heading } from '@chakra-ui/layout';
+import Mainlayout from '../Layout/Mainlayout';
 
-export default () => {
-    return <Heading>Welcome to my web app!!!</Heading>;
+const Home = () => {
+    return <Mainlayout pageName="home"></Mainlayout>;
 };
+export default Home;

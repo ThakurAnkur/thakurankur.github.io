@@ -13,10 +13,6 @@ const MainLoader = ({ componentToLoad }: MainLoaderType): React.ReactElement => 
     const appContext = React.useContext(AppContext);
     appContext.showLoader = true;
 
-    return <Box mt={4}>
-        {
-            <React.Suspense fallback={<PageLoader />}><MyApp /></React.Suspense>
-        }
-    </Box>;
+    return <React.Suspense fallback={<PageLoader />}><MyApp /></React.Suspense>;
 };
 export default MainLoader;

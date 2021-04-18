@@ -23,6 +23,6 @@
     },
     "peacock.color": "#61dafb",
     "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     }
 }

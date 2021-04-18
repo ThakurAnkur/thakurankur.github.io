@@ -8,7 +8,7 @@ describe("<MainLoader />", () => {
     });
     it('Renders Main Loader With Home Page', () => {
         render(<MainLoader componentToLoad={React.lazy(() => import('../../Pages/Home'))}></MainLoader>);
-        expect(screen.getByText(/Welcome/i));
+        expect(screen.getByTestId('home'));
     });
 });
 
