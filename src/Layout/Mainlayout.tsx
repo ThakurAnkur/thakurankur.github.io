@@ -9,6 +9,7 @@ const MainLayout = ({ pageName }: MainLayout) => {
     return (
         <Box className="main-layout-wrapper" minH="100vh" w="100%" data-testid={pageName}>
             <Header />
+            <Heading>Page is under constructions...</Heading>
         </Box>
     );
 };
