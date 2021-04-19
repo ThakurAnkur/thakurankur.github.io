@@ -1,14 +1,20 @@
 import React from "react";
 import { IconButton } from '@chakra-ui/button';
-import { Flex } from '@chakra-ui/layout';
+import { Box, Flex } from '@chakra-ui/layout';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { useColorMode } from '@chakra-ui/color-mode';
 
-export const Header = () => {
+
+export const Header = () => { 
     const { colorMode, toggleColorMode } = useColorMode();
     return <header>
         <Flex p="4">
+            <Box as="ul" listStyleType="none">
+                <li  style={{ fontSize: "24px" }}>
+                <a href="#/games">Games</a>
+                </li>
+            </Box>
             <IconButton
                 onClick={() => {
                     toggleColorMode();

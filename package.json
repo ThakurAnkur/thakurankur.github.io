@@ -32,7 +32,7 @@
         "deploy": "gh-pages -d build",
         "gh-pages-deploy": "node scripts/gh-pages-deploy.js",
         "start": "react-scripts start",
-        "build": "react-scripts test && react-scripts build",
+        "build": "react-scripts build",
         "test": "react-scripts test",
         "test-coverage": "npm test -- --coverage",
         "eject": "react-scripts eject",

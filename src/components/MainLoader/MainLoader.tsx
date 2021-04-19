@@ -1,4 +1,3 @@
-import { Box } from '@chakra-ui/react';
 import * as React from 'react';
 import { AppContext } from '../../context/AppContext';
 import { PageLoader } from './PageLoader';
