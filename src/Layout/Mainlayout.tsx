@@ -5,11 +5,12 @@ import { Header } from "../components/header/Header";
 type MainLayoutProps = {
     pageName: string;
 };
-const MainLayout = ({ pageName }: MainLayoutProps) => {
+const MainLayout = (props: any) => {
+    const { pageName, children } = props;
     return (
         <Box className="main-layout-wrapper" minH="100vh" w="100%" data-testid={pageName}>
             <Header />
-            <Heading>Page is under constructions...</Heading>
+            {children}
         </Box>
     );
 };

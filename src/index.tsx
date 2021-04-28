@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,7 +11,9 @@ import { ColorModeScript } from '@chakra-ui/react';
 ReactDOM.render(
   <React.StrictMode>
     <ColorModeScript initialColorMode={defaultTheme.config.initialColorMode} />
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
