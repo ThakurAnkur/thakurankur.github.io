@@ -1,6 +1,6 @@
 import React from "react";
 import { IconButton } from '@chakra-ui/button';
-import { Box, Flex } from '@chakra-ui/layout';
+import { Flex } from '@chakra-ui/layout';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { useColorMode } from '@chakra-ui/color-mode';

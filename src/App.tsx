@@ -5,8 +5,7 @@ import { AppLoader } from './Pages/AppLoader';
 import { AppContext, AppContextDefaultValue } from "./context/AppContext";
 import { ChakraProvider } from '@chakra-ui/react';
 import { defaultTheme } from './theme/defaultTheme';
-import { Route, Switch, useHistory } from 'react-router-dom';
-import Mainlayout from './Layout/Mainlayout';
+import { Route, Switch } from 'react-router-dom';
 
 function App () {
   return (<AppContext.Provider value={AppContextDefaultValue}>
