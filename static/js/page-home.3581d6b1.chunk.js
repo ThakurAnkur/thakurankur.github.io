@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-app"]=this["webpackJsonpmy-app"]||[]).push([[1],{110:function(t,n,p){"use strict";p.r(n);p(1);var u=p(4);n.default=function(){return Object(u.jsx)("h2",{children:"About Ankur Thakur"})}}}]);
+//# sourceMappingURL=page-home.3581d6b1.chunk.js.map
