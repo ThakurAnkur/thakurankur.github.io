@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { useColorMode } from '@chakra-ui/color-mode';
 import { Breadcrumb, BreadcrumbItem } from '@chakra-ui/breadcrumb';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 import { BreadcrumbLink } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ import { ElContainer } from "../../Elements/ElContainer";
 
 export const Header = () => {
     const { colorMode, toggleColorMode } = useColorMode();
-    const history = useHistory();
+    // const history = useHistory();
     return <header>
         <ElContainer>
             <Breadcrumb>
