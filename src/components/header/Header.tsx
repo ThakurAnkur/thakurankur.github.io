@@ -1,6 +1,5 @@
 import React from "react";
 import { IconButton } from '@chakra-ui/button';
-import { Flex } from '@chakra-ui/layout';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { useColorMode } from '@chakra-ui/color-mode';
@@ -9,17 +8,18 @@ import { useHistory } from 'react-router';
 import { BreadcrumbLink } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
+import { ElContainer } from "../../Elements/ElContainer";
+
 
 export const Header = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const history = useHistory();
-    console.log(history);
     return <header>
-        <Flex p="4">
+        <ElContainer>
             <Breadcrumb>
                 <BreadcrumbItem>
-                    <BreadcrumbLink as={Link} to="#">
-                        Todo
+                    <BreadcrumbLink as={Link} to="todo">
+                        TodoList
                     </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbItem>
@@ -27,8 +27,8 @@ export const Header = () => {
                         More Links to Come
                     </BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbItem as={Link} to="contact">
-                    <BreadcrumbLink>More Links to Come</BreadcrumbLink>
+                <BreadcrumbItem>
+                    <BreadcrumbLink as={Link} to="contact">More Links to Come</BreadcrumbLink>
                 </BreadcrumbItem>
             </Breadcrumb>
             <IconButton
@@ -40,6 +40,6 @@ export const Header = () => {
                 aria-label="Change Site Theme"
                 icon={<FontAwesomeIcon icon={colorMode === 'dark' ? faSun : faMoon} />}
             />
-        </Flex>
-    </header>;
+        </ElContainer>
+    </header >;
 };

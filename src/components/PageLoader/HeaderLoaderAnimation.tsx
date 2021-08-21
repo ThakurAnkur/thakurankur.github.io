@@ -7,7 +7,7 @@ export type LoaderTypes = {
 };
 
 let value = 0;
-export const PageLoader = (): React.ReactElement<LoaderTypes> | null => {
+export const HeaderLoaderAnimation = (): React.ReactElement<LoaderTypes> | null => {
     const [loading, setLoading] = React.useState(true);
     const appContext = React.useContext(AppContext);
 
@@ -28,7 +28,24 @@ export const PageLoader = (): React.ReactElement<LoaderTypes> | null => {
             appContext.showLoader = false;
         }
         value = value + 10;
-    }, 10);
-    return appContext.showLoader ? (<Box height={4} w={'100%'} bgColor={'cyan'} pos={'fixed'} top={0} left={0}><Box id="loader-slider" bgColor={'black'} height={'100%'} transition={'width 0.1s ease'} data-testid="loader-slider"></Box></Box>) : null;
-    // return <h2>Hello</h2>
+    }, 100);
+    return appContext.showLoader
+        ? (
+            <Box
+                height={4}
+                w={'100%'}
+                bgColor={'cyan'}
+                pos={'fixed'}
+                top={0}
+                left={0}
+            >
+                <Box
+                    id="loader-slider"
+                    bgColor={'black'}
+                    height={'100%'}
+                    transition={'width 0.1s ease'} data-testid="loader-slider"
+                />
+            </Box>
+        )
+        : null;
 };
